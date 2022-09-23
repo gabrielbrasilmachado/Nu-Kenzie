@@ -1,0 +1,89 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--grey-2);
+    border-radius: 4px;
+    gap: 1rem;
+}
+
+form div p {
+    font-size: 12px;
+    color: var(--grey-3);
+    font-family: var(--font-family-inter);
+}
+
+.div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputDescriptionDiv {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 0.5rem;
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 45%;
+    gap: 0.5rem;
+}
+
+input,
+select,
+option {
+    font-size: 16px;
+    background-color: var(--grey-1);
+    border: 2px solid transparent;
+    height: 48px;
+    border-radius: 8px;
+    padding-left: 0.8rem;
+    cursor: pointer;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border: 2px solid var(--grey-4);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::placeholder {
+    color: var(--grey-3);
+}
+
+option,
+select {
+    color: var(--grey-3);
+}
+
+form label {
+    font-family: var(--font-family-inter);
+    font-size: 12px;
+    color: var(--grey-4);
+}
+
+form div span {
+    font-family: var(--font-family-inter);
+    font-size: 16px;
+    color: var(--grey-3);
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: var(--grey-1);
+    width: fit-content;
+}
