@@ -1,0 +1,25 @@
+.filters {
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.filters h2 {
+    font-family: var(--font-family-nunito);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.filters div {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (min-width:768px) {
+    .filters {
+        flex-direction: row;
+    }
+}
