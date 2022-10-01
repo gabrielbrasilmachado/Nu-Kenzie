@@ -1,12 +1,21 @@
 import "./style.css";
 
-const Filters = ({ setAuxListTransitions, listTransitions }) => {
-  const filter = (type) => {
-    type === "all"
-      ? setAuxListTransitions([])
-      : setAuxListTransitions(
-          listTransitions.filter((item) => item.type === type)
-        );
+const Filters = ({
+  setAuxListTransitions,
+  listTransitions,
+  setTransitionType,
+  filterAll,
+}) => {
+  const filterEntrys = () => {
+    const filter = listTransitions.filter((item) => item.type === "entry");
+    setAuxListTransitions(filter);
+    setTransitionType("entry");
+  };
+
+  const filterOutputs = () => {
+    const filter = listTransitions.filter((item) => item.type === "output");
+    setAuxListTransitions(filter);
+    setTransitionType("output");
   };
 
   return (
@@ -15,7 +24,7 @@ const Filters = ({ setAuxListTransitions, listTransitions }) => {
       <div>
         <button
           onClick={() => {
-            filter("all");
+            filterAll();
           }}
           className="button2"
           autoFocus
@@ -24,7 +33,7 @@ const Filters = ({ setAuxListTransitions, listTransitions }) => {
         </button>
         <button
           onClick={() => {
-            filter("entry");
+            filterEntrys();
           }}
           className="button2"
         >
@@ -32,7 +41,7 @@ const Filters = ({ setAuxListTransitions, listTransitions }) => {
         </button>
         <button
           onClick={() => {
-            filter("output");
+            filterOutputs();
           }}
           className="button2"
         >

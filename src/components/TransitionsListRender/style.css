@@ -1,0 +1,25 @@
+.emptyList {
+    font-family: var(--font-family-nunito);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--grey-4);
+    line-height: 34px;
+    margin-top: 2rem;
+}
+
+.TransitionsList {
+    height: 240px;
+    margin-top: 2rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .TransitionsList {
+        height: 600px;
+        max-height: 800px;
+    }
+}
