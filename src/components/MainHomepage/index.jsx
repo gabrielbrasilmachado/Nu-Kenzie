@@ -2,7 +2,7 @@ import Filters from "../Filters";
 import Form from "../Form";
 import TotalMoney from "../TotalMoney";
 import Header from "../Header";
-import TransitionsListRender from "../TransitionsList";
+import TransitionsListRender from "../TransitionsListRender";
 
 const MainHomepage = ({
   listTransitions,
@@ -10,6 +10,9 @@ const MainHomepage = ({
   setIsLoggedIn,
   auxListTransitions,
   setAuxListTransitions,
+  transitionType,
+  setTransitionType,
+  filterAll,
 }) => {
   return (
     <>
@@ -29,14 +32,15 @@ const MainHomepage = ({
         <section className="listSection">
           <Filters
             listTransitions={listTransitions}
-            setListTransitions={setListTransitions}
-            auxListTransitions={auxListTransitions}
             setAuxListTransitions={setAuxListTransitions}
+            setTransitionType={setTransitionType}
+            filterAll={filterAll}
           />
           <TransitionsListRender
             listTransitions={listTransitions}
             setListTransitions={setListTransitions}
             auxListTransitions={auxListTransitions}
+            transitionType={transitionType}
           />
         </section>
       </main>
